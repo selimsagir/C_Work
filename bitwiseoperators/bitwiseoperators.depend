@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1601733171 source:c:\users\selim\documents\codeblock_codes\bitwiseoperators\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1601733171 
+
+1602586333 source:/home/selim/Desktop/bitwiseoperators/main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1599770405 source:/home/selim/__C_Work/roundW2/main.c
+	<stdio.h>
+	<stdlib.h>
+
