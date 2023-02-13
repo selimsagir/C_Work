@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1676329758 source:c:\users\selim\documents\c\recursion_occurences\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1669419896 source:c:\users\selim\documents\c\1\scheduler\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<windows.h>
+

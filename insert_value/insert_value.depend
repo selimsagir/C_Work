@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1676326467 source:c:\users\selim\documents\c\insert_value\main.c
+	<stdio.h>
+	<stdlib.h>
+
