@@ -2,22 +2,28 @@
 #include <stdlib.h>
 
 
+typedef struct {
+    int max1; // max value
+    int max2; // second max value
+}values_t;
 
-
-int find_second_highest(int arr[], int len);
+values_t *find_second_highest(int arr[], int len);
 
 int main()
 {
 
     int array[] = { 1,2,10,3,4,5,6,7,8,9};
     int len = 10;
-
-    printf("Second highest number is : %d ",find_second_highest(array, len) );
+    values_t *r = find_second_highest(array, len);
+    printf("Second highest number is : %d ", r->max2 );
     return 0;
 }
 
 
-int find_second_highest(int arr[], int len){
+values_t *find_second_highest(int arr[], int len){
+
+
+    values_t *p = (values_t*)malloc(sizeof(values_t));
 
     int max1 = 0;
     int max2 = 0;
@@ -42,5 +48,7 @@ int find_second_highest(int arr[], int len){
             max2 = arr[i];
          }
     }
-    return max2;
+ p->max1 = max1;
+ p->max2 = max2;
+ return p;
 }
