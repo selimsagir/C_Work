@@ -49,7 +49,8 @@ values_t *find_second_highest(int arr[], int len){
             max2 = arr[i];
          }
     }
- p->max1 = max1;
- p->max2 = max2;
- return p;
+
+    p->max1 = max1;
+    p->max2 = max2;
+    return p;
 }
