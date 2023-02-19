@@ -16,6 +16,7 @@ int main()
     int len = 10;
     values_t *r = find_second_highest(array, len);
     printf("Second highest number is : %d ", r->max2 );
+    free(r);
     return 0;
 }
 
