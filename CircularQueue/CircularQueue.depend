@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1677191361 source:c:\users\selim\documents\c\circularqueue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	<stdbool.h>
+
