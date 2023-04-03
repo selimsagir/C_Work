@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\selim\Documents\C\Designated_Initialers_Array\Designated_Initialers_Array\main.c(10,37): error C2143: syntax error: missing ']' before '...'
+C:\Users\selim\Documents\C\Designated_Initialers_Array\Designated_Initialers_Array\main.c(10,37): error C2059: syntax error: '...'
+C:\Users\selim\Documents\C\Designated_Initialers_Array\Designated_Initialers_Array\main.c(11,11): error C2143: syntax error: missing ';' before '['
