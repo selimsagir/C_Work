@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1679867795 source:c:\users\selim\documents\c\oop_c_example\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<assert.h>
+	"rect.h"
+	"shape.h"
+
+1679864692 c:\users\selim\documents\c\oop_c_example\rect.h
+	"shape.h"
+
+1679799126 c:\users\selim\documents\c\oop_c_example\shape.h
+	<stdint.h>
+
+1679867592 source:c:\users\selim\documents\c\oop_c_example\rect.c
+	"rect.h"
+
+1679867592 source:c:\users\selim\documents\c\oop_c_example\shape.c
+	"shape.h"
+
