@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/selim/Documents/C/linked_list_implementation/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\Executable.dir\\main.c.obj -c C:\\Users\\selim\\Documents\\C\\linked_list_implementation\\main.c",
+  "file": "C:/Users/selim/Documents/C/linked_list_implementation/main.c",
+  "output": "CMakeFiles/Executable.dir/main.c.obj"
+}
+]
