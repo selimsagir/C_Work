@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/selim/Documents/C/circular_linkedlist/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\Executable.dir\\main.c.obj -c C:\\Users\\selim\\Documents\\C\\circular_linkedlist\\main.c",
+  "file": "C:/Users/selim/Documents/C/circular_linkedlist/main.c",
+  "output": "CMakeFiles/Executable.dir/main.c.obj"
+},
+{
+  "directory": "C:/Users/selim/Documents/C/circular_linkedlist/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\Executable.dir\\linked.c.obj -c C:\\Users\\selim\\Documents\\C\\circular_linkedlist\\linked.c",
+  "file": "C:/Users/selim/Documents/C/circular_linkedlist/linked.c",
+  "output": "CMakeFiles/Executable.dir/linked.c.obj"
+}
+]
