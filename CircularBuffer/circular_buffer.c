@@ -46,7 +46,7 @@ cbuf_handle_t circular_buf_init(uint8_t* buffer, size_t size){
 
     cbuf->buffer = buffer;
     cbuf->max = size;
-
+    cbuf->full = false;
     circular_buf_reset(cbuf);
     assert(circular_buf_empty(cbuf));
     return cbuf;
@@ -103,7 +103,7 @@ int circular_buf_try_put(cbuf_handle_t me, uint8_t data){
     int r = -1;
     assert( me && me->buffer);
 
-    if(circular_buf_full(me))
+    if(!circular_buf_full(me))
 	{
 		me->buffer[me->head] = data;
 		advance_head_pointer(me);
