@@ -38,6 +38,13 @@ bool enqueue(queue *q, int value){
     q->values[q->tail] = value;
     q->num_entries++;
     q->tail = (q->tail +1) % q->size;
+// if (q->tail == q->size - 1) {
+// q->tail = 0;
+// } else {
+// q->tail++;
+// }
+// result = true;
+// }
     return true;
 }
 int dequeue(queue *q){
@@ -48,6 +55,12 @@ int dequeue(queue *q){
     }
     result = q->values[q->head];
     q->head = (q->head + 1) % q->size;
+// if (q->head + 1 < q->size) {
+// q->head++;
+// } else {
+// q->head = 0;
+// }
+
     q->num_entries--;
     return result;
 }
@@ -58,10 +71,14 @@ int main()
 
     init_queue(&q1, 5);
 
-    enqueue(&q1, 66);
-    enqueue(&q1, 55);
-    enqueue(&q1, 44);
+    enqueue(&q1, 11);
+    enqueue(&q1, 22);
     enqueue(&q1, 33);
+    enqueue(&q1, 44);
+    enqueue(&q1, 55);
+    enqueue(&q1, 66);
+    enqueue(&q1, 77);
+    enqueue(&q1, 88);
 
 
     int t;
