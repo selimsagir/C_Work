@@ -1,0 +1,3 @@
+C:/Users/selim/Documents/C/Data_manipulation/build/CMakeFiles/Myproject.dir
+C:/Users/selim/Documents/C/Data_manipulation/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/selim/Documents/C/Data_manipulation/build/CMakeFiles/ZERO_CHECK.dir
