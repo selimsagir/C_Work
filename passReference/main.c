@@ -17,6 +17,8 @@ typedef struct {
 
 void func_list(packet_t *Lpack, size_t size);
 int func(packet_t *pack, math_t *Imath);
+packet_t* create_struct(size_t size);
+
 
 int main()
 {
@@ -25,13 +27,25 @@ int main()
     packet_t pack1;
     math_t math1;
 
-    packet_t pack_list[5];
+    //packet_t pack_list[5];
 
-    func_list(pack_list, 5);
+
+    packet_t *pack_list;
+    pack_list = create_struct(5);
+
 
     for (uint8_t i = 0; i < 5; i++) {
         pack_list[i].x = i;
     }
+    printf(" \n");
+    for (uint8_t i = 0; i < 5; i++) {
+       printf("*%f\n", pack_list[i].x);
+        //pack_list[i].x = i;
+    }
+    printf(" \n");
+
+    func_list(pack_list, 5);
+
     printf("After: %.1f\n", pack_list[2].x);
 
     pack1.val = arr;
@@ -47,6 +61,13 @@ int main()
 
     return 0;
 }
+
+packet_t* create_struct(size_t size){
+    packet_t *pack_list = (packet_t*)malloc(size*sizeof(packet_t));
+    return  pack_list;
+}
+
+
 
 void func_list(packet_t *Lpack, size_t size)
 {
