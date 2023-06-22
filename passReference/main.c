@@ -19,6 +19,7 @@ void func_list(packet_t *Lpack, size_t size);
 int func(packet_t *pack, math_t *Imath);
 packet_t* create_struct(size_t size);
 
+void cast_func(void *ptr);
 
 int main()
 {
@@ -35,8 +36,11 @@ int main()
 
 
     for (uint8_t i = 0; i < 5; i++) {
-        pack_list[i].x = i;
+        pack_list[i].x = (i+5)*2;   // 10, 12, 14
     }
+
+    cast_func(pack_list);
+
     printf(" \n");
     for (uint8_t i = 0; i < 5; i++) {
        printf("*%f\n", pack_list[i].x);
@@ -59,15 +63,25 @@ int main()
     printf("diff: %.1f\n", math1.diff);
     printf("string: %s\n", pack1.name);
 
+    free(pack_list);
     return 0;
+}
+
+
+void cast_func(void *ptr){
+    packet_t *pack = (packet_t*)ptr;
+    float x = (pack++)->x;
+    printf("casting: %.1f\n", x);
+    float y = (pack++)->x;
+    printf("casting+: %.1f\n", y);
+    float z = (pack++)->x;
+    printf("casting++: %.1f\n", z);
 }
 
 packet_t* create_struct(size_t size){
     packet_t *pack_list = (packet_t*)malloc(size*sizeof(packet_t));
     return  pack_list;
 }
-
-
 
 void func_list(packet_t *Lpack, size_t size)
 {
