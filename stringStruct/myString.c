@@ -26,6 +26,17 @@ struct string *makeString(const char *s){
 
 };
 
+
+void stringPrint(struct string *s){
+    int idx = 0;
+    printf("\n\n");
+    while(!(s->data[idx] == '\0')){
+        printf("%c", s->data[idx]);
+        idx++;
+    }
+
+}
+
 void destroyString(struct string* s){
 
     free(s->data);

@@ -10,6 +10,8 @@ int stringLen(struct string* s);
 
 int stringCharAt(struct string* s, int index);
 
+void stringPrint(struct string *s);
+
 int returnVar(void);
 
 

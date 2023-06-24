@@ -10,8 +10,10 @@ int main()
     char data[] = "this is new version";
     struct string *myString = makeString("this is new version");
 
-    printf("Len is : %d", stringLen(myString));
-     printf("char is : %c", stringCharAt(myString, 2));
+    printf("Len is : %d\n", stringLen(myString));
+    printf("char is : %c\n", stringCharAt(myString, 2));
+    stringPrint(myString);
+    destroyString(new_string);
 
    // printf("test variable :%s\n", new_string->length);
 
