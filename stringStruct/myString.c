@@ -27,6 +27,23 @@ struct string *makeString(const char *s){
 };
 
 
+void stringJoin(struct string *s, const char *ch){
+    int len = strlen(ch);
+    printf("len:%d\n", len);
+    int len_left = strlen(s->data);
+    printf("len_left:%d\n", len_left);
+
+
+    s->length += len;
+    printf("s->length:%d\n", s->length);
+     s->data = realloc(s->data, s->length + 1); // reallocations until size settles
+    //s->data[len_left + 1] = ch;
+    memcpy(&s->data[len_left], ch, len+1);
+    //memcpy(&s->data[len_left+1], ch, len + 1);
+}
+
+
+
 void stringPrint(struct string *s){
     int idx = 0;
     printf("\n\n");

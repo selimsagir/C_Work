@@ -12,6 +12,8 @@ int stringCharAt(struct string* s, int index);
 
 void stringPrint(struct string *s);
 
+void stringJoin(struct string *s, const char *ch);
+
 int returnVar(void);
 
 
