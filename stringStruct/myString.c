@@ -43,6 +43,21 @@ void stringJoin(struct string *s, const char *ch){
 }
 
 
+void stringRemoveChar(struct string *s, const char *ch){
+
+    int len = strlen(s);
+    int idx = 0;
+    while(!(s->data[idx] == '\0')) {
+        if(s->data[idx] == ch){
+            s->data[idx] = s->data[idx+1];
+        }
+        else {
+            idx++;
+        }
+    }
+
+}
+
 
 void stringPrint(struct string *s){
     int idx = 0;

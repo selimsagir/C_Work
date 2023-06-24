@@ -17,6 +17,10 @@ int main()
     stringJoin(myString, "AAAA");
     stringPrint(myString);
     printf("\n");
+    stringRemoveChar(myString, 'h');
+    stringPrint(myString);
+    printf("\n");
+
     destroyString(new_string);
 
    // printf("test variable :%s\n", new_string->length);
