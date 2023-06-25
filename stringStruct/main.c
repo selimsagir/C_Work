@@ -8,21 +8,29 @@ int main()
 {
     struct string *new_string;
 
-    struct string *myString = makeString("this is new version");
+    struct string *myString = makeString("Selim");
 
-    //printf("Len is : %d\n", stringLen(myString));
+    printf("Len is : %d\n", stringLen(myString));
     //printf("char is : %c\n", stringCharAt(myString, 2));
     stringPrint(myString);
     printf("\n");
-    stringJoin(myString, "AAAA");
+    stringJoin(myString, "A");
     stringPrint(myString);
-    printf("\n");
-    stringRemoveChar(myString, 'h');
-    stringPrint(myString);
-    printf("\n");
 
+    printf("\n");
+    stringRemoveChar(myString,'S');
+    stringRemoveChar(myString,'e');
+    stringRemoveChar(myString,'A');
+    stringPrint(myString);
+    /*
+    stringRemoveChar(myString, "e");
+    stringRemoveChar(myString, "l");
+    printf("Removed: \n");
+    stringPrint(myString);
+    printf("\n");
+    printf("Len is : %d\n", stringLen(myString));
     destroyString(new_string);
-
+*/
    // printf("test variable :%s\n", new_string->length);
 
 }

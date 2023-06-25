@@ -8,6 +8,7 @@ struct string {
     char *data;
 };
 
+
 struct string *makeString(const char *s){
 
     struct string *s2;
@@ -42,21 +43,48 @@ void stringJoin(struct string *s, const char *ch){
     //memcpy(&s->data[len_left+1], ch, len + 1);
 }
 
-
-void stringRemoveChar(struct string *s, const char *ch){
-
-    int len = strlen(s);
+void stringRemoveChar(struct string *s,  const char ch) {
+    int len = s->length;
     int idx = 0;
-    while(!(s->data[idx] == '\0')) {
-        if(s->data[idx] == ch){
-            s->data[idx] = s->data[idx+1];
+   // printf("len is :%d\n", len);
+   // printf("*ch is :%c\n", *ch);
+   // printf("ch is :%c\n", ch);
+    while (s->data[idx] != '\0') {
+        if(s->data[idx] == ch)
+        {
+            for(int i = idx; i<len; i++)
+            {
+                s->data[i] = s->data[i+1];
+            }
+        s->length--;
         }
-        else {
-            idx++;
-        }
+    idx++;
     }
 
 }
+
+/*
+void stringRemoveChar(struct string *s,  char *ch) {
+    int len = s->length;
+    int idx = 0;
+   // printf("len is :%d\n", len);
+   // printf("*ch is :%c\n", *ch);
+   // printf("ch is :%c\n", ch);
+    while (idx < len - 1) {
+        printf("%s\n", s->data);
+        if (s->data[idx] == *ch) {
+                printf("idx: %d", idx);
+            for (int i = idx; i < len - 1; i++) {
+                s->data[i] = s->data[i + 1];
+            }
+            s->length--;
+        } else {
+            idx++;
+        }
+    }
+    s->data[s->length] = '\0'; // Add null-terminator at the end
+}
+*/
 
 
 void stringPrint(struct string *s){
