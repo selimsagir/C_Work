@@ -28,6 +28,23 @@ struct string *makeString(const char *s){
 };
 
 
+void stringRemoveOccurance(struct string *s){
+
+    int idx = 0;
+    while(s->data[idx] != '\0'){
+        //aabcc
+        if(s->data[idx] == s->data[idx+1]){
+            for(int i = idx; i < s->length; i++){
+                s->data[i] = s->data[i+1];
+            }
+            s->length--;
+        }
+        else {
+            idx++;
+        }
+    }
+}
+
 void stringJoin(struct string *s, const char *ch){
     int len = strlen(ch);
     int len_left = strlen(s->data);
