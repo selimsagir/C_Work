@@ -16,8 +16,6 @@ void stringJoin(struct string *s, const char *ch);
 
 void stringRemoveChar(struct string *s,  const char ch);
 
-int returnVar(void);
-
 
 
 

@@ -11,7 +11,7 @@ int main()
     struct string *myString = makeString("Selim");
 
     printf("Len is : %d\n", stringLen(myString));
-    //printf("char is : %c\n", stringCharAt(myString, 2));
+    printf("char is : %c\n", stringCharAt(myString, 2));
     stringPrint(myString);
     printf("\n");
     stringJoin(myString, "A");
@@ -22,37 +22,7 @@ int main()
     stringRemoveChar(myString,'e');
     stringRemoveChar(myString,'A');
     stringPrint(myString);
-    /*
-    stringRemoveChar(myString, "e");
-    stringRemoveChar(myString, "l");
-    printf("Removed: \n");
+    stringJoin(myString, "X");
     stringPrint(myString);
-    printf("\n");
-    printf("Len is : %d\n", stringLen(myString));
-    destroyString(new_string);
-*/
-   // printf("test variable :%s\n", new_string->length);
 
 }
-
-
-
-/*int main()
-{
-    struct string s;
-    struct string *sp;
-
-    sp = &s;
-
-    s.length = 4l;
-    s.data = "This is more than four";
-
-    puts(s.data);
-    puts(sp->data);
-    puts((*sp).data);
-
-
-    printf("test variable :%d\n", returnVar());
-    return 0;
-}
-*/
