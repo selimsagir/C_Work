@@ -9,23 +9,22 @@ struct string {
 };
 
 
-struct string *makeString(const char *s){
-
+struct string *makeString(const char *s) {
     struct string *s2;
     s2 = malloc(sizeof(struct string));
-    if(0 == s2) {
+    if (s2 == 0) {
         return 0;
     }
     s2->length = strlen(s);
-    (*s2).data = malloc(s2->length);
-
-    if(s2->data == 0) {
+    s2->data = malloc(sizeof(char) * (s2->length + 1));
+    if (s2->data == 0) {
         free(s2);
+        return 0;
     }
     strncpy(s2->data, s, s2->length);
+    s2->data[s2->length] = '\0'; // Add the null terminator
     return s2;
-
-};
+}
 
 
 void stringRemoveOccurance(struct string *s){
