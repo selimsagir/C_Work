@@ -1,6 +1,10 @@
 #ifndef MY_STRING_H
 #define MY_STRING_H
 
+enum position{
+    BEGIN,
+    END,
+};
 
 struct string *makeString(const char *s);
 
@@ -18,6 +22,7 @@ void stringRemoveChar(struct string *s,  const char ch);
 
 void stringRemoveOccurance(struct string *s);
 
+int stringRemoveFrom(struct string *s, enum position pos);
 
 
 #endif // MY_STRING_H

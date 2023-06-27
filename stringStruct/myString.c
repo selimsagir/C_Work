@@ -26,6 +26,32 @@ struct string *makeString(const char *s) {
     return s2;
 }
 
+int stringRemoveFrom(struct string *s, enum position pos)
+{
+    if(s->length == 0){
+        printf("Empty string\n");
+        return -1;
+    }
+    if( pos == BEGIN)
+    {
+        for(int idx=0; idx<s->length-1; idx++)
+        {
+            s->data[idx] = s->data[idx+1];
+        }
+        s->length--;
+        s->data[s->length] = '\0'; // Add the null terminator
+    }
+    else if(pos == END)
+    {
+        s->length--;
+        s->data[s->length] = '\0'; // Add the null terminator
+    }
+    else
+    {
+        return -1;
+    }
+
+}
 
 void stringRemoveOccurance(struct string *s){
 
