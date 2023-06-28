@@ -25,7 +25,7 @@ int main()
 */
    // stringPrint(myString);
     stringRemoveFrom(myString, BEGIN);
-    stringPrint(myString);
+    //stringPrint(myString);
     stringRemoveFrom(myString, END);
     stringPrint(myString);
 }

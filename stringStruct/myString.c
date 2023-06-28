@@ -96,6 +96,10 @@ void stringRemoveChar(struct string *s,  const char ch) {
 }
 
 void stringPrint(struct string *s){
+    if(s->length == 0){
+        printf("Empty string...\n");
+        return -1;
+    }
     int idx = 0;
     printf("\n\n");
     while(!(s->data[idx] == '\0')){
