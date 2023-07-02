@@ -24,5 +24,8 @@ void stringRemoveOccurance(struct string *s);
 
 int stringRemoveFrom(struct string *s, enum position pos);
 
+struct string* stringGetUser(void);
+
+void  removeNumeric(struct string *s);
 
 #endif // MY_STRING_H

@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1687895735 source:c:\users\selim\documents\c\stringstruct\main.c
+1688165692 source:c:\users\selim\documents\c\stringstruct\main.c
 	<stdio.h>
 	<stdlib.h>
 	"myString.h"
 
-1687895035 c:\users\selim\documents\c\stringstruct\mystring.h
+1688165580 c:\users\selim\documents\c\stringstruct\mystring.h
 
-1687976987 source:c:\users\selim\documents\c\stringstruct\mystring.c
+1688165589 source:c:\users\selim\documents\c\stringstruct\mystring.c
 	<stdlib.h>
 	<string.h>
 	"myString.h"

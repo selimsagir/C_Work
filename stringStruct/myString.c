@@ -26,6 +26,29 @@ struct string *makeString(const char *s) {
     return s2;
 }
 
+struct string* stringGetUser(void){
+    char *ch;
+    scanf("%s", ch);
+    return ch;
+};
+void removeNumeric(struct string* s)
+{
+    int idx, i;
+    for (idx = 0; idx < s->length; idx++) {
+        if (s->data[idx] >= '0' && s->data[idx] <= '9') {
+            printf("here :%c\n", s->data[idx]);
+            for (i = idx; i < s->length; i++) {
+                s->data[i] = s->data[i + 1];
+            }
+            s->length--;
+            idx--; // Decrease the outer loop index to recheck the current position
+        }
+    }
+    s->data[s->length] = '\0';
+}
+
+
+
 int stringRemoveFrom(struct string *s, enum position pos)
 {
     if(s->length == 0){
