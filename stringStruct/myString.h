@@ -29,4 +29,6 @@ struct string* stringGetUser(void);
 void  removeNumeric(struct string *s);
 void stringChangeChar(struct string *s, char ch, int index);
 
+void stringReverse(struct string *s);
+
 #endif // MY_STRING_H

@@ -158,3 +158,23 @@ void stringChangeChar(struct string *s, char ch, int index){
     s->data[index] = ch;
 
 }
+void stringReverse(struct string *s){
+
+    int idx;
+    char temp;
+    int last_idx;
+    last_idx = s->length;
+    char *reverse = malloc(sizeof(struct string));
+    
+    for(idx = 0; idx < s->length; idx++){
+        temp = s->data[idx];
+        // printf("%c",temp);
+        reverse[last_idx-1] = temp; 
+        printf("%c",reverse[last_idx-1]);
+        last_idx--;
+        // printf("%d",last_idx);
+    }
+    strncpy(s->data, reverse,s->length);
+    free(reverse);
+}
+
