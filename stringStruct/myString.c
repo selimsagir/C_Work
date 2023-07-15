@@ -153,3 +153,8 @@ int stringCharAt(struct string *s, int index){
     }
 }
 
+void stringChangeChar(struct string *s, char ch, int index){
+
+    s->data[index] = ch;
+
+}

@@ -27,5 +27,6 @@ int stringRemoveFrom(struct string *s, enum position pos);
 struct string* stringGetUser(void);
 
 void  removeNumeric(struct string *s);
+void stringChangeChar(struct string *s, char ch, int index);
 
 #endif // MY_STRING_H
