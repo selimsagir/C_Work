@@ -178,3 +178,19 @@ void stringReverse(struct string *s){
     free(reverse);
 }
 
+ 
+void stringDoubleChars(struct string *s) {
+    int doubledLength = s->length * 2;
+    char *doubledData = (char*)malloc(sizeof(char) * (doubledLength + 1));
+    
+    for (int i = 0; i < s->length; i++) {
+        doubledData[i * 2] = s->data[i];
+        doubledData[i * 2 + 1] = s->data[i];
+    }
+    
+    doubledData[doubledLength] = '\0'; // Null-terminate the new string
+    free(s->data); // Free the original string
+    s->data = doubledData;
+    s->length = doubledLength;
+}
+

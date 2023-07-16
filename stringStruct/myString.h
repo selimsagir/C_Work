@@ -31,4 +31,6 @@ void stringChangeChar(struct string *s, char ch, int index);
 
 void stringReverse(struct string *s);
 
+void stringDoubleChars(struct string *s);
+
 #endif // MY_STRING_H
