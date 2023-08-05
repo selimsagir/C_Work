@@ -17,9 +17,9 @@ typedef struct
 
 FunctionEntry functionArray[] = {
     {functionOne, 5},
-    {functionTwo, 10},
+    {functionTwo, 9},
     {functionThree, 3},
-    {functionFour, 2},
+    {functionFour, 10},
 
 };
 
@@ -43,7 +43,7 @@ int scheduler(void){
     Sleep(1000);
     int max_priority = functionArray[0].priority;
     int max_priority_index = 0;
-    for(int i = 1; i < numFunctions; i++ ){  //start from 1
+    for(int i = 0; i < numFunctions; i++ ){  //start from 1
         if(functionArray[i].priority > max_priority  ) {
             max_priority = functionArray[i].priority;
             max_priority_index = i;
