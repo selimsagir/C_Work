@@ -11,4 +11,7 @@ $(EXECUTABLE): $(SRC)
 	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
 clean:
-	rm -f $(EXECUTABLE)
+	del $(EXECUTABLE)
+
+run: $(EXECUTABLE)
+	PowerShell -Command "Measure-Command { .\$(EXECUTABLE) }"
